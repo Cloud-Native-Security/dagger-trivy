@@ -1,9 +1,10 @@
-module github.com/Cloud-Native-Security/dagger-trivy
+module github.com/Cloud-Native-Security/dagger-trivy/app
 
 go 1.20
 
+require dagger.io/dagger v0.9.6
+
 require (
-	dagger.io/dagger v0.9.6 // indirect
 	github.com/99designs/gqlgen v0.17.31 // indirect
 	github.com/Khan/genqlient v0.6.0 // indirect
 	github.com/adrg/xdg v0.4.0 // indirect
