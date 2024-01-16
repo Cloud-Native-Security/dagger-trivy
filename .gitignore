@@ -1,1 +1,4 @@
 /app/build
+/app/dagger.gen.go
+/app/internal/querybuilder/
+/app/querybuilder/
