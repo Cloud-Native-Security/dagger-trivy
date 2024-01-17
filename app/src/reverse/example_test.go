@@ -7,7 +7,7 @@ package reverse_test
 import (
 	"fmt"
 
-	"github.com/Cloud-Native-Security/dagger-trivy/app/reverse"
+	"github.com/Cloud-Native-Security/dagger-trivy/app/src/reverse"
 )
 
 func ExampleString() {

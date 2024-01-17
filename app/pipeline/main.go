@@ -25,21 +25,21 @@ func build(ctx context.Context) error {
 	defer client.Close()
 
 	// get reference to the local project
-	src := client.Host().Directory("./src")
-	mod := client.Host().File("./go.mod")
-	sum := client.Host().File("./go.sum")
+	src := client.Host().Directory("./")
+	//mod := client.Host().File("./go.mod")
+	//sum := client.Host().File("./go.sum")
 
 	// get `golang` image
 	golang := client.Container().From("golang:latest")
 
 	// mount cloned repository into `golang` image
 	golang = golang.WithDirectory("/src", src).WithWorkdir("/src")
-	golang = golang.WithFile("go.mod", mod)
-	golang = golang.WithFile("go.sum", sum)
+	//golang = golang.WithFile("go.mod", mod)
+	//golang = golang.WithFile("go.sum", sum)
 
 	// define the application build command
 	path := "build/"
-	golang = golang.WithExec([]string{"env", "GOOS=darwin", "GOARCH=arm64", "go", "build", "-o", path})
+	golang = golang.WithExec([]string{"env", "GOOS=darwin", "GOARCH=arm64", "go", "build", "-o", path, "./src/hello.go"})
 
 	// get reference to build output directory in container
 	output := golang.Directory(path)
