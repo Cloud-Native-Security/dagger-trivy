@@ -20,3 +20,9 @@ Using Trivy to scan the project for vulnerabilities with the Trivy-Dagger integr
 
 Following the Dagger Documentation: https://docs.dagger.io/sdk/go/
 Use the resources in the [following folder.](./one/build.sh)
+
+## Dagger commands
+
+```
+dagger --focus=false call build --src ./ export --path ./build-two
+```
