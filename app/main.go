@@ -8,7 +8,7 @@ import (
 type Example struct{}
 
 const (
-	trivyImageTag = "0.49.0" // semver tag or "latest"
+	trivyImageTag = "0.49.1" // semver tag or "latest"
 )
 
 // example usage: "dagger call container-echo --string-arg yo"
