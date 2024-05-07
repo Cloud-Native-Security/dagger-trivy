@@ -2,6 +2,11 @@
   "name": "example",
   "sdk": "go",
   "dependencies": [
-    "github.com/jpadams/daggerverse/trivy@d3ef5e830fe40bf1c84625fa5a5830689c694f9e"
-  ]
+    {
+      "name": "trivy",
+      "source": "github.com/jpadams/daggerverse/trivy@dce5436fb7dea3e6283557c9b50c7e077d524653"
+    }
+  ],
+  "source": ".",
+  "engineVersion": "v0.11.2"
 }
